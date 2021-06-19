@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <title>Productos</title>
+</head>
+<body>
+    <header class="header">
+        <div class="encabezadoMin">        
+            <img class="logo" src="images/logo.png" alt="logo"> 
+            <div class="btn_menu"><i class="fas fa-bars"></i><!--<a>MENÚ</a>--></div>
+        </div>
+
+        
+        <nav class="encabezado">             
+            <div class="menu">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="productos.html">Productos</a> 
+                        <!-- <ul class="submenu">
+                            <li><a href="#abrigo">
+                                Abrigos
+                            </a></li>
+                            <li><a href="#remera">
+                                Remeras
+                            </a></li>
+                            <li><a href="#vestido">
+                                Vestidos
+                            </a></li>
+                            <li><a href="#tablaTalles">
+                                Tabla de talles
+                            </a></li>
+                        </ul> -->
+                </ul>
+            </div>
+        </nav> 
+    </header>
+
+        <article class="ubicacion-prod">
+
+            <section>
+                <h1 id="abrigo">Abrigos</h1>
+                <div class="producto">
+                    <div>
+                        <img class="img-producto" id="imgProductoTop" src="images/saco.jpg" alt="saco"> 
+                        <h4>SACO VERDE</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                
+                    <div>
+                        <img class="img-producto" id="imgProductoTop" src="images/saco2.jpg" alt="saco2"> 
+                        <h4>SACO NEGRO</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                    
+                    <div>
+                        <img class="img-producto" id="imgProductoBottom" src="images/saco3.jpg" alt="saco3"> 
+                        <h4>SACO BLANCO</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                    <div>
+                        <img class="img-producto" id="imgProductoBottom" src="images/saco4.jpg" alt="saco3"> 
+                        <h4>SACO BORDEAUX</h4>
+                        <h5>PRECIO: $7.000</h5>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h1 id="remera"> Remeras</h1>
+                <div class="producto">
+                    <div>
+                        <img class="img-producto" id="imgProductoTop" src="images/remera.jpg" alt="saco"> 
+                        <h4>REMERA BLANCA</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                
+                    <div>
+                        <img class="img-producto"  id="imgProductoTop" src="images/remera2.jpg" alt="saco2"> 
+                        <h4>REMERA GRIS</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                    
+                    <div>
+                        <img class="img-producto"  id="imgProductoBottom" src="images/remera3.jpg" alt="saco3"> 
+                        <h4>REMERA VOLADOS</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                    <div>
+                        <img class="img-producto" id="imgProductoBottom" src="images/remera4.jpg" alt="saco3"> 
+                        <h4>REMERA ESCOTE V</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                </div>
+            </section>    
+
+            <section>
+                <h1 id="vestido" class="">Vestidos</h1>
+                <div class="producto">
+                    <div>
+                        <img class="img-producto" id="imgProductoTop" src="images/vestido.jpg" alt="saco"> 
+                        <h4>VESTIDO NEGRO CORTO</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                
+                    <div>
+                        <img class="img-producto" id="imgProductoTop" src="images/vestido2.jpg" alt="saco2"> 
+                        <h4>VESTIDO ESTAMPADO</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                    
+                    <div>
+                        <img class="img-producto" id="imgProductoBottom" src="images/vestido3.jpg" alt="saco3"> 
+                        <h4>VESTIDO NEGRO LARGO</h4>
+                        <h5>PRECIO: $5.000</h5>
+                    </div>
+                    <div>
+                        <img class="img-producto" id="imgProductoBottom" src="images/vestido4.jpg" alt="saco"> 
+                        <h4>VESTIDO MARRON</h4>
+                        <h5>PRECIO: $8.000</h5>
+                    </div>
+                </div>
+            </section>
+        
+           
+            <h1 id="tablaTalles">Tabla de talles</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <td>TALLES</td>
+                        <td>BUSTO</td>
+                        <td>CINTURA ANATÓMICA</td>
+                        <td>CADERA</td>                          
+                    </tr>
+                </thead >
+                <tbody id="tablaDeTalles"> 
+
+                </tbody>
+
+            </table>
+              
+            <section class="inputsTalles">
+                <div>
+                    <button class="btn-anterior btn-talles"> Anterior </button> 
+                    <button class="btn-siguiente  btn-talles"> Siguiente </button> 
+                </div>
+            </section>
+
+            <section class="inputsTalles">
+                
+                <form id="form-talles"> 
+                    
+                    <div>
+
+                        <div>
+                            <h3> Talle a ingresar - modificar</h3>
+                            <input type="text" id="talle" name="talle" class="inputT" placeholder="Ingresar talle..." maxlength="3" required>
+                            
+                        </div> 
+                        <div class="inputs-tabla">
+                            <h3 id="titulo-inputs"> Ingrese valores </h3>
+                            <input type="text" id="busto" name="busto" class="inputT" placeholder="Ingresar valor de busto..." minlength="5" maxlength="7" required>
+                            <input type="text" id="cintura" name="cintura" class="inputT" placeholder="Ingresar valor de cintura..." minlength="5" maxlength="7" required>
+                            <input type="text" id="cadera" name="cadera" class="inputT" placeholder="Ingresar valor de cadera..." minlength="5" maxlength="7" required>
+                        </div>             
+                        
+                    </div>
+                    
+                    <div class="btn-tabla">
+                        <button class="btn-cargar"> Agregar talle </button> 
+                        <button id="btn-agregarTres" class="btn-talles">  Agregar x3 </button>
+                        <button id="btn-modificar"> Modificar </button>               
+                        <button type="button" id="btn-vaciar" class="btn-talles"> Vaciar tabla </button>
+                    </div>
+                </form>
+
+                <form id="form-delete">
+                    <h3> Eliminar talle </h3>
+                    <div>
+                        <input type="text" id="talle-delete" name="talleDelete" class="inputT" placeholder="Ingrese talle a eliminar..." maxlength="3" required>
+                        <button id="btn-borrar"> Eliminar </button>  
+                    </div>
+                    
+
+                    <p id="mensaje"> </p>  
+                    
+                    <!-- <div>
+                        <input type="text" id="talle-edit" name="talleEditDelete" class="inputT" placeholder="Ingrese talle a modificar..." maxlength="3" required>
+                        <input type="text" id="busto-edit" name="busto" class="inputT" placeholder="Modificar valor de busto..." minlength="5" maxlength="7" required>
+                        <input type="text" id="cintura-edit" name="cintura" class="inputT" placeholder="Modificar valor de cintura..." minlength="5" maxlength="7" required>
+                        <input type="text" id="cadera-edit" name="cadera" class="inputT" placeholder="Modificar valor de cadera..." minlength="5" maxlength="7" required>
+                        <button id="btn-modificar"> Modificar </button>
+                    </div> -->
+
+                </form>
+
+        
+                <h3> ¡Ingresa tu talle y te indicamos tus medidas!</h3>
+                <form id="form-medidas">
+                    <input type="text" name="talleUsuario" class="inputT" placeholder="Ingresa tu talle..." maxlength="3" required>
+                    <button id="btn-enviar" class="btn-talles"> Enviar </button>     
+                    <p id="validarTalle"> </p>  
+                </form>
+            </section>
+
+            
+            <footer>
+                <h4>ENCONTRANOS EN:</h4>
+                <div>
+                    <a href="https://www.facebook.com/" target="_blank"> <img id="redes" src="images/logofb.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/" target="_blank"> <img id="redes" src="images/logoig.png" alt="Instagram"></a>
+                </div>    
+            </footer>
+
+        </article>
+    <script type="text/javascript" src="js/main.js"></script>   
+    <script type="text/javascript" src="js/productos.js"></script>   
+</body>
+</html>

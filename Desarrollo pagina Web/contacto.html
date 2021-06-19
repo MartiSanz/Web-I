@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contacto</title>
+</head>
+<body>
+    <header class="header">
+        <div class="encabezadoMin">        
+            <img class="logo" src="images/logo.png" alt="logo"> 
+            <div class="btn_menu"><a>MENÚ</a></div>
+        </div>
+
+        <nav class="encabezado">             
+            <div class="menu">
+                <ul class="navigation">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="productos.html">Productos</a> </li>
+                </ul>
+            </div>
+        </nav> 
+    </header>
+    <div class="formato contacto">
+        <h2>Contactate con nosotros:</h2>
+
+        <form action="">        
+            <label for="motivo">Motivo:</label>
+            <select class="campos-form">
+                <option value="reclamo">Reclamo</option>
+                <option value="consulta">Consulta</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="nombre">Nombre y Apellido:</label>
+            <input  class="campos-form" type="text" name="nombre" value="">
+
+            <label for="mail">Mail:</label>
+            <input  class="campos-form" type="text" name="nombre" value="">
+            
+            
+            <label for="descripcion">Descripcion:</label>
+            <textarea  class="campos-form" name="text" id="" cols="30" rows="10"></textarea>
+            
+
+            <!-- CAPTCHA -->
+            
+            <p><img id="ia" alt="Imagen aleatoria"  /></p>
+            <button type="button" id="btn-img">Cambiar CAPTCHA</button>
+   
+            <input type="text" id="txt-captcha">             
+        
+            <button type="button" id="btn-enviar"> Enviar</button>
+            <p id="validacion"> </p>
+            
+        </form>
+    </div>
+
+    
+    <footer>
+        <h4>ENCONTRANOS EN:</h4>
+        <div>
+            <a href="https://www.facebook.com/" target="_blank"> <img id="redes" src="images/logofb.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"> <img id="redes" src="images/logoig.png" alt="Instagram"></a>
+        </div>    
+    </footer>
+    
+
+    <script type="text/javascript" src="js/captcha.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
