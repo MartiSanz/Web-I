@@ -1,5 +1,6 @@
 "use strict";
 
+
 //---------------- NAV CON BOTON MENU RESPONSIVE ------------------------------
  
 document.querySelector(".btn_menu").addEventListener("click", toggleMenu);
@@ -165,7 +166,7 @@ function cargarProductos(){
       contenedor.innerHTML = text; // muestra el texto por pantalla
 
       
-    console.log("llama desde carga productos");
+    //console.log("llama desde carga productos");
       obtenerDatos(urlPrimerPag);
 
       // AGREGAR UN TALLE
@@ -198,6 +199,20 @@ function cargarProductos(){
       // CERRAR MODIFICAR
       let btnCerrarModificar = contenedor.querySelector(".btn-cerrar"); 
       btnCerrarModificar.addEventListener("click", ocultarModificar);
+
+          let formModificar = document.querySelector("#inputsModificar");
+        let formTallesModificar =
+            document.querySelector("#form-modificar");
+        console.log(formTallesModificar);
+        formTallesModificar.addEventListener("submit", function (e) {
+            console.log(
+            "confirmación de modificación del elemento " +
+                this.dataset.data
+            );
+            //pandora
+            modificarTalle(this.dataset.btnId, e);
+            formModificar.setAttribute("id", "inputsModificar");
+        });
     })
     .catch(function(response) {
             contenedor.innerHTML = "Connection error"
@@ -224,7 +239,7 @@ async function agregar(e){
     limpiarInputs();
     i = 1;
     
-    console.log("llama desde agregar comun");
+    //console.log("llama desde agregar comun");
     obtenerDatos(urlPrimerPag);
 }
 
@@ -263,11 +278,11 @@ async function agregarTalle(e){
         });
 
         if(res.status === 201){
-            console.log("cargo");
+            //console.log("cargo");
         }
         
     } catch(error){
-        console.log(error);
+        //console.log(error);
     }
 }
 
@@ -306,6 +321,7 @@ function crearFila(talle){
         btnEditar.className +=  "btn-talles";
         btnEditar.setAttribute("id", "btn-editar");
         btnEditar.dataset.modificar = talle.id;
+        btnEditar.dataset.info = talle.nombre + ' ' + talle.busto;
         btnEditar.type = "image";
         btnEditar.src = "js/images/editar.ico";
         
@@ -320,7 +336,7 @@ function crearFila(talle){
 
 async function obtenerDatos(url){
 
-    console.log("llamar a obtener datos");
+    //console.log("llamar a obtener datos");
     
     let tabla = document.querySelector("#tablaDeTalles");
     tabla.innerHTML= "";
@@ -328,14 +344,14 @@ async function obtenerDatos(url){
     try{
         let res= await fetch(url); // fetch funciona como un GET
         let talles= await res.json(); //se parsea de texto a objeto
-        console.log(talles);  
+        //console.log(talles);  
         tabla.innerHTML= "";
         for(const talle of talles){
             let fila = crearFila(talle);
             tabla.appendChild(fila);
         };
     }  catch(error){
-        console.log(error);
+        //console.log(error);
     }
 }
 
@@ -358,7 +374,7 @@ async function agregarTres(e){
 
     limpiarInputs();
     i = 1;
-    console.log("llama desde agregar tres");
+    //console.log("llama desde agregar tres");
     obtenerDatos(urlPrimerPag);
 }
 
@@ -374,38 +390,32 @@ async function borrarTalle(){
         });
 
         if(res.status === 200){
-            console.log("Eliminado!");
+            //console.log("Eliminado!");
         }
     } catch (error){
-        console.log(error);
+        //console.log(error);
     }
 
     limpiarInputs();
     i=1;
     
-    console.log("llama desde borrar talle");
+    //console.log("llama desde borrar talle");
     obtenerDatos(urlPrimerPag);
 }
 
 function editarTalle(){
     
     let formModificar = document.querySelector("#inputsModificar");
-
+    formModificar.setAttribute("id", "inputsMostrar");
     limpiarInputs();
     let talleId = this.dataset.modificar;
 
-    console.log(talleId + "entro a editar talle");
-
-    formModificar.setAttribute("id", "inputsMostrar");
+    console.log("editando talle " + this.dataset.info );
 
     let formTallesModificar = document.querySelector("#form-modificar");
+    formTallesModificar.dataset.btnId = talleId;
+    formTallesModificar.dataset.data = this.dataset.info;
     buscarTalle(talleId);
-
-    formTallesModificar.addEventListener("submit", function(e){
-        console.log(talleId + "entro al evento");
-        modificarTalle(talleId, e);
-        formModificar.setAttribute("id", "inputsModificar");
-    });
    
 }
 
@@ -430,7 +440,7 @@ async function ocultarModificar(){
             }
         }  
     } catch (error){
-        console.log(error);
+        //console.log(error);
     }
 }
 
@@ -438,7 +448,7 @@ async function ocultarModificar(){
 
 function cargarNuevosDatos(e){
 
-    console.log("entra a cargar nuevos datos");
+    //console.log("entra a cargar nuevos datos");
     e.preventDefault();
 
     let formTallesModificar = document.querySelector("#form-modificar");
@@ -464,11 +474,11 @@ async function modificarTalle(idTalle, e){
 
     e.preventDefault();
 
-    console.log("entra a modificar talle");
+    //console.log("entra a modificar talle");
 
     let nuevoTalle = cargarNuevosDatos(e);
 
-    console.log("sale de cargar nuevos datos");
+    //console.log("sale de cargar nuevos datos");
    
     try{
         let res = await fetch(url + "/" + idTalle, {
@@ -478,18 +488,18 @@ async function modificarTalle(idTalle, e){
         });
 
         if(res.status === 200){
-            console.log("Modificado");
-            console.log(id);
+            //console.log("Modificado");
+            //console.log(id);
         }
 
         i = 1; // cuando agrego muestro desde la primer pagina, entonces reseteo el iterador para la paginacion
         
-        console.log("llama desde modificar talle");
+        //console.log("llama desde modificar talle");
         obtenerDatos(urlPrimerPag);
         limpiarInputs();
 
     } catch (error){
-        console.log(error);
+        //console.log(error);
     }
 
 }
@@ -547,7 +557,7 @@ async function cambiarHojaTalles(i){
 
 async function buscarTalle(idTalle){
 
-    console.log(idTalle + " entro a buscar talle");
+    //console.log(idTalle + " entro a buscar talle");
 
     let res= await fetch(url);
     let talles= await res.json();
@@ -560,7 +570,7 @@ async function buscarTalle(idTalle){
         }
         
     } catch (error){
-        console.log(error);
+        //console.log(error);
     }
 }
 
@@ -633,7 +643,7 @@ function imprimir(tablaFiltro){
     if(selectFiltro == "talle"){
         i = 1;
         
-        console.log("llama desde filtro");
+        //console.log("llama desde filtro");
         obtenerDatos(urlPrimerPag);
     }
 
