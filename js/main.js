@@ -392,8 +392,7 @@ function editarTalle(){
     let formModificar = document.querySelector("#inputsModificar");
 
     limpiarInputs();
-    let talleId= " ";
-    talleId= this.dataset.modificar;
+    let talleId = this.dataset.modificar;
 
     console.log(talleId + "entro a editar talle");
 
