@@ -1,0 +1,171 @@
+<article class="ubicacion-prod">
+
+    <section>
+        <h1 id="abrigo">Abrigos</h1>
+        <div class="producto">
+            <div>
+                <img class="img-producto" id="imgProductoTop" src="images/productos/saco.jpg" alt="saco"> 
+                <h4>SACO VERDE</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+        
+            <div>
+                <img class="img-producto" id="imgProductoTop" src="images/productos/saco2.jpg" alt="saco2"> 
+                <h4>SACO NEGRO</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+            
+            <div>
+                <img class="img-producto" id="imgProductoBottom" src="images/productos/saco3.jpg" alt="saco3"> 
+                <h4>SACO BLANCO</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+            <div>
+                <img class="img-producto" id="imgProductoBottom" src="images/productos/saco2.jpg" alt="saco4"> 
+                <h4>SACO BORDEAUX</h4>
+                <h5>PRECIO: $7.000</h5>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 id="remera"> Remeras</h1>
+        <div class="producto">
+            <div>
+                <img class="img-producto" id="imgProductoTop" src="images/productos/remera.jpg" alt="remera"> 
+                <h4>REMERA BLANCA</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+        
+            <div>
+                <img class="img-producto"  id="imgProductoTop" src="images/productos/remera2.jpg" alt="remera2"> 
+                <h4>REMERA GRIS</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+            
+            <div>
+                <img class="img-producto"  id="imgProductoBottom" src="images/productos/remera3.jpg" alt="remera3"> 
+                <h4>REMERA VOLADOS</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+            <div>
+                <img class="img-producto" id="imgProductoBottom" src="images/productos/remera2.jpg" alt="remera4"> 
+                <h4>REMERA ESCOTE V</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+        </div>
+    </section>    
+
+    <section>
+        <h1 id="vestido" >Vestidos</h1>
+        <div class="producto">
+            <div>
+                <img class="img-producto" id="imgProductoTop" src="images/productos/vestido.jpg" alt="vestido"> 
+                <h4>VESTIDO NEGRO CORTO</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+        
+            <div>
+                <img class="img-producto" id="imgProductoTop" src="images/productos/vestido2.jpg" alt="vestido2"> 
+                <h4>VESTIDO ESTAMPADO</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+            
+            <div>
+                <img class="img-producto" id="imgProductoBottom" src="images/productos/vestido3.jpg" alt="vestido3"> 
+                <h4>VESTIDO NEGRO LARGO</h4>
+                <h5>PRECIO: $5.000</h5>
+            </div>
+            <div>
+                <img class="img-producto" id="imgProductoBottom" src="images/productos/vestido2.jpg" alt="vestido4"> 
+                <h4>VESTIDO MARRON</h4>
+                <h5>PRECIO: $8.000</h5>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h1 id="tablaTalles">Tabla de talles</h1>
+        
+        <div id= "filtro">
+            <h3 id="tit-filtro">Filtrar tabla</h3>
+            <select class="inputDisenio" id="selectFiltro">
+                <option value="talle" selected> Ver todos los talles</option>
+                <option value="busto"> Filtrar por busto</option>
+                <option value="cintura"> Filtrar por cintura</option>
+                <option value="cadera"> Filtrar por cadera</option>
+            </select>
+
+            <input class="inputOculto" id="medidaMin" type="number" placeholder="Medida minima">
+            <input class="inputOculto" id="medidaMax" type="number" placeholder="Medida maxima">
+            <button id="btn-filtro"> Ver </button> 
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>TALLES</td>
+                    <td>BUSTO</td>
+                    <td>CINTURA ANATÓMICA</td>
+                    <td>CADERA</td>                        
+                </tr>
+            </thead >
+            <tbody id="tablaDeTalles"> 
+
+            </tbody>
+        </table>
+    </section>
+        
+    <section class="inputsTalles">
+        <div>
+            <button class="btn-anterior btn-talles"> Anterior </button> 
+            <button class="btn-siguiente  btn-talles"> Siguiente </button> 
+        </div>
+
+        <p id="mensaje"></p>
+    </section>
+
+    <section class="inputsTalles" id="inputsEditar">
+        <form id="form-editar"> 
+            <div class="editarEncabezado">
+                <h4 id="h4-editar"> Ingrese nuevos datos </h4>
+                <input type="image" class="btn-cerrar" src="images/iconos/cerrar.ico"> 
+            </div>
+            <div id="div-inputsMod">
+                <input type="text" id="nuevoTalle" name="talleNuevo" class="inputT inputMod inputDisenio" placeholder="Nuevo talle..." maxlength="3" required>
+                <input type="text" id="nuevoBusto" name="bustoNuevo" class="inputT inputMod inputDisenio" placeholder="Valor busto..." minlength="2" maxlength="3" required>
+                <input type="text" id="nuevoCintura" name="cinturaNuevo" class="inputT inputMod inputDisenio" placeholder="Valor cintura..." minlength="2" maxlength="3" required>
+                <input type="text" id="nuevoCadera" name="caderaNuevo" class="inputT inputMod inputDisenio" placeholder="Valor cadera..." minlength="2" maxlength="3" required>   
+                <button id="btn-enviarEditar"> Enviar </button>
+            </div>
+        </form>
+    </section>
+
+    <section class="inputsTalles">
+        
+        <form id="form-talles"> 
+            
+            <div>
+                <div>
+                    <h3> Talle a ingresar</h3>
+                    <input type="text" id="talle" name="talle" class="inputT inputDisenio" placeholder="Ingresar talle..." maxlength="3" required>
+                    
+                </div> 
+                <div class="inputs-tabla">
+                    <h3 id="titulo-inputs"> Ingrese valores </h3>
+                    <input type="text" id="busto" name="busto" class="inputT inputDisenio" placeholder="Ingresar valor de busto..." minlength="2" maxlength="3" required>
+                    <input type="text" id="cintura" name="cintura" class="inputT inputDisenio" placeholder="Ingresar valor de cintura..." minlength="2" maxlength="3" required>
+                    <input type="text" id="cadera" name="cadera" class="inputT inputDisenio" placeholder="Ingresar valor de cadera..." minlength="2" maxlength="3" required>
+                </div>             
+                
+            </div>
+            
+            <div class="btn-tabla">
+                <button class="btn-cargar"> Agregar talle </button> 
+                <button id="btn-agregarTres" class="btn-talles">  Agregar x3 </button>
+            </div>
+        </form>
+
+    </section>
+
+</article>
